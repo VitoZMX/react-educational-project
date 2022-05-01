@@ -6,24 +6,21 @@
 }
 
 .item {
+    padding: 0;
+    margin-bottom: 0.3em;
+}
+
+.item a {
+    font-size: 14px;
     color: white;
-    padding: 0.1em;
+    text-decoration: none;
 }
 
 .item:last-child {
     margin-top: 1em;
 }
 
-.item:hover {
-    cursor: pointer;
-    background-color: #d2356e;
-    border-radius: 4px;
-}
-
-.active {
+.item a.ActiveLink {
+    font-weight: bold;
     color: #d2356e;
-}
-
-.active:hover {
-    background-color: #aab7c5;
 }
