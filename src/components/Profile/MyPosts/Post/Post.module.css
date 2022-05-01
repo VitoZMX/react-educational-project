@@ -1,0 +1,8 @@
+.item {
+    color: greenyellow;
+}
+
+.item img{
+    width: 6em;
+    clip-path: circle(2em at 50% 50%);
+}

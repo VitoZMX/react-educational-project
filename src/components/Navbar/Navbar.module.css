@@ -1,0 +1,29 @@
+.nav {
+    grid-area: n;
+    background-color: #85919e;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.item {
+    color: white;
+    padding: 0.1em;
+}
+
+.item:last-child {
+    margin-top: 1em;
+}
+
+.item:hover {
+    cursor: pointer;
+    background-color: #d2356e;
+    border-radius: 4px;
+}
+
+.active {
+    color: #d2356e;
+}
+
+.active:hover {
+    background-color: #aab7c5;
+}
