@@ -4,11 +4,15 @@ import Post from "./Post/Post"
 
 const MyPosts = () => {
 
-    let postData = [
+    let posts = [
         {id: 1, message: 'Hi, are you?', likesCount: 2},
         {id: 2, message: 'It\'s my first post!', likesCount: 12},
-        {id: 3, message: 'Hello world!', likesCount: 42}
+        {id: 3, message: 'LOLUK', likesCount: 1338},
+        {id: 4, message: 'WTF', likesCount: 0},
+        {id: 5, message: 'Hello world!', likesCount: 42}
     ]
+
+    let postElements = posts.map(p => <Post message={p.message} likeCoun={p.likesCount}/>)
 
     return (
         <div className={s.conteinerPosts}>
@@ -19,12 +23,9 @@ const MyPosts = () => {
                     <button>Add post</button>
                     <button>Remove</button>
                 </div>
-
             </div>
             <div className={s.posts}>
-                <Post message={postData[0].message} likeCoun={postData[0].likesCount}/>
-                <Post message={postData[1].message} likeCoun={postData[1].likesCount}/>
-                <Post message={postData[2].message} likeCoun={postData[2].likesCount}/>
+                {postElements}
             </div>
         </div>
     )
