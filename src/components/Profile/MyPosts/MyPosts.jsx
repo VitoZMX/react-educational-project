@@ -6,10 +6,11 @@ const MyPosts = (props) => {
     let postElements = props.posts.map(p => <Post message={p.message} likeCoun={p.likesCount}/>)
     let newPostElement = React.createRef()
 
-    // let addPost = () => {
-    //     let text = newPostElement.current.value
-    //     alert(text)
-    // }
+    let addPost = () => {
+        let text = newPostElement.current.value
+        props.addPost(text)
+        newPostElement.current.value = ''
+    }
 
     return (
         <div className={s.conteinerPosts}>
@@ -19,7 +20,7 @@ const MyPosts = (props) => {
                     <textarea ref={newPostElement}></textarea>
                 </div>
                 <div>
-                    <button onClick={props.addPost}>Add post</button>
+                    <button onClick={addPost}>Add post</button>
                     <button>Remove</button>
                 </div>
             </div>

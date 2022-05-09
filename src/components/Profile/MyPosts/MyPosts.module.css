@@ -5,3 +5,11 @@
 .posts {
     margin-top: 1em;
 }
+
+textarea {
+    background-color: #e0e0e0;
+    width: 100%;
+    height: 2em;
+    font-size: 34px;
+    outline: none;
+}
