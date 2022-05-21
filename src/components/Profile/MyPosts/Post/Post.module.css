@@ -2,12 +2,14 @@
     border: 1px solid #85919e;
     background-color: rgba(133, 145, 158, 0.3);
     border-radius: 8px;
-    color: #d8010b;
+    color: #d2356e;
     margin-bottom: 0.5em;
-    padding: 0.3em;
+    padding: 0.4em;
 }
 
 .item img {
-    width: 6em;
-    clip-path: circle(2em at 50% 50%);
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
 }

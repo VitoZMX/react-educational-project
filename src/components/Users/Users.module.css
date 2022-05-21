@@ -1,0 +1,30 @@
+.usersPage {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-gap: 1em;
+    padding: 1em;
+}
+
+.userCont {
+    text-align: center;
+    border: solid 1px #85919e;
+    border-radius: 10px;
+    display: grid;
+    word-break: break-all;
+}
+
+.userCont:hover {
+    cursor: pointer;
+    background-color: #85919e;
+}
+
+.fullName {
+    font-weight: bold;
+}
+
+.userPhoto {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+
+}
