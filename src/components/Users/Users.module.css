@@ -1,11 +1,28 @@
 .usersPage {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    grid-gap: 1em;
+    grid-template-rows: auto auto;
+    grid-template-columns: 7fr;
+    grid-gap: 7px;
     padding: 1em;
 }
 
+.selectedPageContainer {
+    display: grid;
+    grid-template-columns: repeat(50, 1fr);
+}
+
+.selectedPageContainer span {
+    text-align: center;
+}
+
+.selectedPageContainer span:hover {
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #a4e4fd;
+}
+
 .userCont {
+    margin: 0 5px 0 5px;
     text-align: center;
     border: solid 1px #85919e;
     border-radius: 10px;
@@ -23,8 +40,14 @@
 }
 
 .userPhoto {
-    width: 100%;
+    border-radius: 10px;
+    width: 110px;
     height: 110px;
     object-fit: cover;
 
+}
+
+.selectedPage {
+    font-weight: bold;
+    color: #d2356e;
 }
