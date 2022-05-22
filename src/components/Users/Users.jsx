@@ -5,12 +5,15 @@ import userPhoto from '../../assets/images/noimg.jpeg'
 
 let Users = (props) => {
 
-    if (props.users.length === 0) {
-        axios.get("https://social-network.samuraijs.com/api/1.0/users")
-            .then(response => {
-                props.setUsers(response.data.items)
-            })
+    let getUsers = () => {
+        if (props.users.length === 0) {
+            axios.get("https://social-network.samuraijs.com/api/1.0/users")
+                .then(response => {
+                    props.setUsers(response.data.items)
+                })
+        }
     }
+
 
 // props.setUsers(
     //     [
@@ -58,6 +61,7 @@ let Users = (props) => {
     // )
 
     return <div className={s.usersPage}>
+        <button onClick={getUsers}>Get Users</button>
         {
             props.users.map(u => <div key={u.id} className={s.userCont}>
                 <span>
@@ -66,13 +70,8 @@ let Users = (props) => {
                              alt='avaImg'/>
                     </div>
                     <div>
-                        {u.followed
-                            ? <button onClick={() => {
-                                props.unfollow(u.id)
-                            }}>Unfollow</button>
-                            : <button onClick={() => {
-                                props.follow(u.id)
-                            }}>Follow</button>}
+                        {u.followed ? <button onClick={() => { props.unfollow(u.id)}}>Unfollow</button>
+                            : <button onClick={() => { props.follow(u.id)}}>Follow</button>}
                     </div>
                 </span>
                 <span>
