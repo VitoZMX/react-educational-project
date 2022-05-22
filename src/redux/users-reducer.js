@@ -7,7 +7,6 @@ let initialState = {
 }
 
 const usersReducer = (state = initialState, action) => {
-
     switch (action.type) {
         case FOLLOW:
             return {
@@ -29,8 +28,9 @@ const usersReducer = (state = initialState, action) => {
                     return u
                 })
             }
-        case SET_USERS:
+        case SET_USERS: {
             return {...state, users: [...state.users, ...action.users]}
+        }
         default:
             return state
     }
