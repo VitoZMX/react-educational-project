@@ -8,7 +8,7 @@
 
 .selectedPageContainer {
     display: grid;
-    grid-template-columns: repeat(50, 1fr);
+    grid-template-columns: repeat(20, 1fr);
 }
 
 .selectedPageContainer span {
