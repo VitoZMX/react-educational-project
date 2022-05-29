@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './ProfileInfo.module.css'
 import Preloader from '../../common/Preloader/Preloader'
+import NoAvatarImg from '../../../assets/images/noimg.jpeg'
 import facebookIcon from '../../../assets/icon/facebook.svg'
 import websiteIcon from '../../../assets/icon/website.svg'
 import vkIcon from '../../../assets/icon/vk.svg'
@@ -19,10 +20,10 @@ const ProfileInfo = (props) => {
     return (
         <div id={props.profile.userId}>
             <div>
-                <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"/>
+                <img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg'/>
             </div>
             <div className={s.descriptionBlock}>
-                <img src={props.profile.photos.large}/>
+                <img src={props.profile.photos.large ? props.profile.photos.large : NoAvatarImg}/>
                 <div>
                     <div className={s.fullName}>{props.profile.fullName}</div>
                     <div>Обо мне: {props.profile.aboutMe}</div>
@@ -36,8 +37,7 @@ const ProfileInfo = (props) => {
                         <li><a href={props.profile.contacts.website} target="_blank"><img src={websiteIcon}/></a></li>
                         <li><a href={props.profile.contacts.vk} target="_blank"><img src={vkIcon}/></a></li>
                         <li><a href={props.profile.contacts.twitter} target="_blank"><img src={twitterIcon}/></a></li>
-                        <li><a href={props.profile.contacts.instagram} target="_blank"><img src={instagramIcon}/></a>
-                        </li>
+                        <li><a href={props.profile.contacts.instagram} target="_blank"><img src={instagramIcon}/></a></li>
                         <li><a href={props.profile.contacts.youtube} target="_blank"><img src={youtubeIcon}/></a></li>
                         <li><a href={props.profile.contacts.github} target="_blank"><img src={githubIcon}/></a></li>
                         <li><a href={props.profile.contacts.mainLink} target="_blank"><img src={mainLinkIcon}/></a></li>

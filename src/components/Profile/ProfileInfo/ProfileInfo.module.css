@@ -26,7 +26,7 @@ img {
 .contactInfo ul li {
     list-style: none;
     display: inline;
-    margin: 0.5em;
+    margin-right: 1em;
 }
 
 .contactInfo ul li img:hover {
