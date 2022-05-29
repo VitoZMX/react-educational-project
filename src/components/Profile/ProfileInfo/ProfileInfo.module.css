@@ -4,5 +4,40 @@ img {
 }
 
 .descriptionBlock {
-    padding: 1em;
+    padding: 1em 1em 0 1em;
+}
+
+.descriptionBlock img {
+    width: 15em;
+    border-radius: 1em;
+}
+
+.fullName {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d2356e;
+}
+
+.contactInfo ul {
+    margin: 0;
+    padding: 0;
+}
+
+.contactInfo ul li {
+    list-style: none;
+    display: inline;
+    margin: 0.5em;
+}
+
+.contactInfo ul li img:hover {
+    transform: rotate(15deg);
+    transition-duration: .2s;
+}
+
+.contactInfo ul li img {
+    border-radius: 0;
+    scale: 1.5;
+    width: 50px;
+    transform: rotate(0deg);
+    transition-duration: .3s;
 }
