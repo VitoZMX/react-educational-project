@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './ProfileInfo.module.css'
+import imgBacgr from '../../../assets/images/bcgrd.jpg'
 import Preloader from '../../common/Preloader/Preloader'
 import NoAvatarImg from '../../../assets/images/noimg.jpeg'
 import facebookIcon from '../../../assets/icon/facebook.svg'
@@ -20,7 +21,7 @@ const ProfileInfo = (props) => {
     return (
         <div id={props.profile.userId}>
             <div>
-                <img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg'/>
+                <img className={s.backgroundProfile} src={imgBacgr}/>
             </div>
             <div className={s.descriptionBlock}>
                 <img src={props.profile.photos.large ? props.profile.photos.large : NoAvatarImg}/>
