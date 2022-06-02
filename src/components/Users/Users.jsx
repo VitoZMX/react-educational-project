@@ -17,7 +17,9 @@ let Users = (props) => {
         <div className={s.selectedPageContainer}>
             {pages.map(p => {
                 return <span className={props.currentPage === p && s.selectedPage}
-                             onClick={(e) => {props.onPageChanged(p)}}>{p}</span>
+                             onClick={(e) => {
+                                 props.onPageChanged(p)
+                             }}>{p}</span>
             })}
         </div>
         {props.users.map(u => <div key={u.id} className={s.userCont}>
@@ -29,27 +31,34 @@ let Users = (props) => {
                         </NavLink>
                     </div>
                     <div>
-                        {u.followed ? <button onClick={() => {
+                        {u.followed ?
+                            <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
+
+                                props.toggleFollowingProgress(true, u.id)
 
                                 followedAPI.unfollowUser(u.id).then(data => {
                                     if (data.resultCode === 0) {
                                         props.unfollow(u.id)
                                     }
+                                    props.toggleFollowingProgress(false, u.id)
                                 })
 
                             }}>Unfollow</button>
-                            : <button onClick={() => {
+                            : <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
+
+                                props.toggleFollowingProgress(true, u.id)
 
                                 followedAPI.followUser(u.id).then(data => {
                                     if (data.resultCode === 0) {
                                         props.follow(u.id)
                                     }
+                                    props.toggleFollowingProgress(false, u.id)
                                 })
 
                             }}>Follow</button>}
                     </div>
                 </span>
-                <span>
+            <span>
                     <span>
                         <div className={s.fullName}>{u.name}</div><div>{u.status}</div>
                     </span>
@@ -57,7 +66,7 @@ let Users = (props) => {
                         <div>{'u.location.country'}</div><div>{'u.location.city'}</div>
                     </span>
                 </span>
-            </div>)}
+        </div>)}
     </div>
 }
 
