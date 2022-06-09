@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './ProfileInfo.module.css'
+import ProfileStatus from './ProfileStatus'
 import imgBacgr from '../../../assets/images/bcgrd.jpg'
 import Preloader from '../../common/Preloader/Preloader'
 import NoAvatarImg from '../../../assets/images/noimg.jpeg'
@@ -20,16 +21,18 @@ const ProfileInfo = (props) => {
 
     return (
         <div id={props.profile.userId}>
-            <div>
-                <img className={s.backgroundProfile} src={imgBacgr}/>
-            </div>
+            {/*<div>*/}
+            {/*    <img className={s.backgroundProfile} src={imgBacgr}/>*/}
+            {/*</div>*/}
             <div className={s.descriptionBlock}>
                 <img src={props.profile.photos.large ? props.profile.photos.large : NoAvatarImg}/>
                 <div>
+                    <ProfileStatus status={'My new status!'}/>
                     <div className={s.fullName}>{props.profile.fullName}</div>
                     <div>Обо мне: {props.profile.aboutMe}</div>
                     <div>В поиске работы: {props.profile.lookingForAJob ? 'ДА' : 'НЕТ'}</div>
-                    {props.profile.lookingForAJob ? <div>Какую работу я ищу: {props.profile.lookingForAJobDescription}</div> : null}
+                    {props.profile.lookingForAJob ?
+                        <div>Какую работу я ищу: {props.profile.lookingForAJobDescription}</div> : null}
                 </div>
                 <div className={s.contactInfo}>
                     <h3>Contact Info:</h3>
