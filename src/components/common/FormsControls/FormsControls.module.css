@@ -4,9 +4,15 @@
 
 .formControl.error input,
 .formControl.error textarea {
-    border: solid red 1px;
+    border: solid #d2356e 1px;
 }
 
 .formControl.error span {
-    color: red;
+    color: #d2356e;
+}
+
+.formSummaryError {
+    border: #d2356e 1px solid;
+    padding: 5px;
+    color: #d2356e;
 }
