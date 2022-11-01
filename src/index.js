@@ -7,15 +7,19 @@ import App from './App'
 import ReactDOM from 'react-dom/client'
 import {Provider} from 'react-redux'
 
+setInterval(() => {
+    store.dispatch({type: 'FAKE'})
+})
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
     // <React.StrictMode>
-        <BrowserRouter>
-            <Provider store={store}>
-                <App/>
-            </Provider>
-        </BrowserRouter>
+    <BrowserRouter>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </BrowserRouter>
     // </React.StrictMode>
 )
 
