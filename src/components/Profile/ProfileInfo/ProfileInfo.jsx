@@ -1,6 +1,5 @@
 import React from 'react'
 import s from './ProfileInfo.module.css'
-import ProfileStatus from './ProfileStatus'
 import imgBacgr from '../../../assets/images/bcgrd.jpg'
 import Preloader from '../../common/Preloader/Preloader'
 import NoAvatarImg from '../../../assets/images/noimg.jpeg'
@@ -12,6 +11,7 @@ import instagramIcon from '../../../assets/icon/instagram.svg'
 import youtubeIcon from '../../../assets/icon/youtube.svg'
 import githubIcon from '../../../assets/icon/github.svg'
 import mainLinkIcon from '../../../assets/icon/mainLink.svg'
+import ProfileStatusWithHooks from './ProfileStatusWithHooks'
 
 const ProfileInfo = (props) => {
 
@@ -27,7 +27,7 @@ const ProfileInfo = (props) => {
             <div className={s.descriptionBlock}>
                 <img src={props.profile.photos.large ? props.profile.photos.large : NoAvatarImg}/>
                 <div>
-                    <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+                    <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
                     <div className={s.fullName}>{props.profile.fullName}</div>
                     <div>Обо мне: {props.profile.aboutMe}</div>
                     <div>В поиске работы: {props.profile.lookingForAJob ? 'ДА' : 'НЕТ'}</div>
