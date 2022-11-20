@@ -1,0 +1,28 @@
+.paginator {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.selectedPage {
+    font-weight: bold;
+    color: #d2356e;
+}
+
+.userCont {
+    margin: 0 3px 3px 0;
+    border: solid 1px #85919e;
+    border-radius: 4px;
+}
+
+.userCont:hover {
+    cursor: pointer;
+    background-color: #85919e;
+}
+
+.selectedPage:hover {
+    cursor: pointer;
+    background-color: #85919e;
+}
