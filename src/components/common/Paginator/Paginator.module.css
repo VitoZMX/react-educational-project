@@ -1,9 +1,11 @@
 .paginator {
+    margin: 10px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: nowrap;
     align-items: stretch;
+    align-content: center;
 }
 
 .selectedPage {
@@ -11,17 +13,15 @@
     color: #d2356e;
 }
 
-.userCont {
-    margin: 0 3px 3px 0;
+.pageNumber {
+    font-size: 24px;
+    margin: 0 3px;
     border: solid 1px #85919e;
-    border-radius: 4px;
+    border-radius: 5px;
+    padding: 3px;
 }
 
-.userCont:hover {
-    cursor: pointer;
-    background-color: #85919e;
-}
-
+.pageNumber:hover,
 .selectedPage:hover {
     cursor: pointer;
     background-color: #85919e;

@@ -3,3 +3,13 @@
     width: 110px;
     height: 110px;
 }
+
+.userMiniProfile {
+    flex: 1 1 auto;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+.userMiniProfile:hover {
+    background-color: #85919e;
+}

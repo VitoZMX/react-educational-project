@@ -1,0 +1,7 @@
+.usersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 0 5px;
+}
