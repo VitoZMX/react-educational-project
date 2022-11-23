@@ -2,12 +2,12 @@ import reportWebVitals from './reportWebVitals'
 import './index.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import SamuraiJSApp from './App'
+import JSApp from './App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
-    <SamuraiJSApp/>
+    <JSApp/>
 )
 
 // If you want to start measuring performance in your app, pass a function

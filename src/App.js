@@ -1,17 +1,19 @@
-import React from 'react'
+import React, {Suspense} from 'react'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
-import DialogsContainer from './components/Dialogs/DialogsContainer'
-import UsersContainer from './components/Users/UsersContainer'
-import ProfileContainer from './components/Profile/ProfileContainer'
-import HeaderContainer from './components/Header/HeaderContainer'
-import Login from './components/Login/Login'
 import {connect, Provider} from 'react-redux'
 import {compose} from 'redux'
 import {initializeApp} from './redux/app-reducer'
 import Preloader from './components/common/Preloader/Preloader'
 import store from './redux/redux-store'
+//import DialogsContainer from './components/Dialogs/DialogsContainer'
+const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'))
+import UsersContainer from './components/Users/UsersContainer'
+//import ProfileContainer from './components/Profile/ProfileContainer'
+const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'))
+import HeaderContainer from './components/Header/HeaderContainer'
+import Login from './components/Login/Login'
 
 class App extends React.Component {
 
@@ -28,13 +30,15 @@ class App extends React.Component {
                 <HeaderContainer/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Routes>
-                        <Route path='/profile/:userId' element={<ProfileContainer/>}/>
-                        <Route path='/profile/*' element={<ProfileContainer/>}/>
-                        <Route path='/dialogs/*' element={<DialogsContainer/>}/>
-                        <Route path='/users/*' element={<UsersContainer/>}/>
-                        <Route path='/login' element={<Login/>}/>
-                    </Routes>
+                    <Suspense fallback={<div><Preloader/></div>}>
+                        <Routes>
+                            <Route path='/profile/:userId' element={<ProfileContainer/>}/>
+                            <Route path='/profile/*' element={<ProfileContainer/>}/>
+                            <Route path='/dialogs/*' element={<DialogsContainer/>}/>
+                            <Route path='/users/*' element={<UsersContainer/>}/>
+                            <Route path='/login' element={<Login/>}/>
+                        </Routes>
+                    </Suspense>
                 </div>
             </div>
         )
@@ -47,7 +51,7 @@ const mapStateToProps = (state) => ({
 
 let AppContainer = compose(connect(mapStateToProps, {initializeApp}))(App)
 
-const SamuraiJSApp = (props) => {
+const JSApp = (props) => {
     return <BrowserRouter>
         <Provider store={store}>
             <AppContainer/>
@@ -55,4 +59,4 @@ const SamuraiJSApp = (props) => {
     </BrowserRouter>
 }
 
-export default SamuraiJSApp
+export default JSApp
