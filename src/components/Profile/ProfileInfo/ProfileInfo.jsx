@@ -12,17 +12,24 @@ import githubIcon from '../../../assets/icon/github.svg'
 import mainLinkIcon from '../../../assets/icon/mainLink.svg'
 import ProfileStatusWithHooks from './ProfileStatusWithHooks'
 
-const ProfileInfo = ({profile, status, updateStatus}) => {
+const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
 
     if (!profile) {
         return <Preloader/>
     }
 
+    const onMainPhotoSelected = (e) => {
+        if (e.target.files.length) {
+            savePhoto(e.target.files[0])
+        }
+    }
+
     return (
         <div id={profile.userId}>
             <div className={s.descriptionBlock}>
-                <img src={profile.photos.large ? profile.photos.large : NoAvatarImg}/>
+                <img src={profile.photos.large || NoAvatarImg}/>
                 <div>
+                    {isOwner && <input type={'file'} onChange={onMainPhotoSelected}/>}
                     <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
                     <div className={s.fullName}>{profile.fullName}</div>
                     <div>Обо мне: {profile.aboutMe}</div>
@@ -37,8 +44,7 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
                         <li><a href={profile.contacts.website} target="_blank"><img src={websiteIcon}/></a></li>
                         <li><a href={profile.contacts.vk} target="_blank"><img src={vkIcon}/></a></li>
                         <li><a href={profile.contacts.twitter} target="_blank"><img src={twitterIcon}/></a></li>
-                        <li><a href={profile.contacts.instagram} target="_blank"><img src={instagramIcon}/></a>
-                        </li>
+                        <li><a href={profile.contacts.instagram} target="_blank"><img src={instagramIcon}/></a></li>
                         <li><a href={profile.contacts.youtube} target="_blank"><img src={youtubeIcon}/></a></li>
                         <li><a href={profile.contacts.github} target="_blank"><img src={githubIcon}/></a></li>
                         <li><a href={profile.contacts.mainLink} target="_blank"><img src={mainLinkIcon}/></a></li>
