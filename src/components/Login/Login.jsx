@@ -1,6 +1,6 @@
 import React from 'react'
 import {reduxForm} from 'redux-form'
-import {Input, сreateField} from '../common/FormsControls/FormsControls'
+import {Input, createField} from '../common/FormsControls/FormsControls'
 import {required} from '../../utils/validators/validators'
 import {connect} from 'react-redux'
 import {login} from '../../redux/auth-reducer'
@@ -10,9 +10,9 @@ import styles from '../common/FormsControls/FormsControls.module.css'
 const LoginForm = ({handleSubmit, error}) => {
     return (
         <form onSubmit={handleSubmit}>
-            {сreateField('Email', 'email', [required], Input)}
-            {сreateField('Password', 'password', [required], Input, {type: 'password'})}
-            {сreateField(null, 'rememberMe', [], Input, {type: 'checkbox'}, 'remember Me')}
+            {createField('Email', 'email', [required], Input)}
+            {createField('Password', 'password', [required], Input, {type: 'password'})}
+            {createField(null, 'rememberMe', [], Input, {type: 'checkbox'}, 'remember Me')}
             {error && <div className={styles.formSummaryError}>
                 {error}
             </div>}

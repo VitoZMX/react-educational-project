@@ -20,26 +20,6 @@
     color: #d2356e;
 }
 
-.contactInfo ul {
-    margin: 0;
-    padding: 0;
-}
-
-.contactInfo ul li {
-    list-style: none;
-    display: inline;
-    margin-right: 3em;
-}
-
-.contactInfo ul li img:hover {
-    transform: rotate(15deg);
-    transition-duration: .2s;
-}
-
-.contactInfo ul li img {
-    border-radius: 0;
-    scale: 1.5;
-    width: 50px;
-    transform: rotate(0deg);
-    transition-duration: .3s;
+.contact {
+    padding-left: 10px;
 }
