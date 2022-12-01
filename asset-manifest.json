@@ -1,35 +1,27 @@
 {
   "files": {
     "main.css": "/react-educational-project/static/css/main.bf3be06b.css",
-    "main.js": "/react-educational-project/static/js/main.3142e6d8.js",
-    "static/css/270.787af781.chunk.css": "/react-educational-project/static/css/270.787af781.chunk.css",
-    "static/js/270.95dba413.chunk.js": "/react-educational-project/static/js/270.95dba413.chunk.js",
+    "main.js": "/react-educational-project/static/js/main.a87410f5.js",
+    "static/css/88.5edc2712.chunk.css": "/react-educational-project/static/css/88.5edc2712.chunk.css",
+    "static/js/88.dfae5e81.chunk.js": "/react-educational-project/static/js/88.dfae5e81.chunk.js",
     "static/css/687.9e1d30b9.chunk.css": "/react-educational-project/static/css/687.9e1d30b9.chunk.css",
     "static/js/687.788f31e3.chunk.js": "/react-educational-project/static/js/687.788f31e3.chunk.js",
     "static/js/496.3244f5e4.chunk.js": "/react-educational-project/static/js/496.3244f5e4.chunk.js",
     "static/media/noimg.jpeg": "/react-educational-project/static/media/noimg.0cfea98f0e40148dc9f1.jpeg",
     "static/media/avaCat.jpeg": "/react-educational-project/static/media/avaCat.f5995d21302dfb5fb17b.jpeg",
     "static/media/cat.png": "/react-educational-project/static/media/cat.c279465e89f23f5844c5.png",
-    "static/media/website.svg": "/react-educational-project/static/media/website.0a25a333b7e56cf739b2191cacb217fc.svg",
-    "static/media/github.svg": "/react-educational-project/static/media/github.0b124e1fed6d22676dd66b19b949101e.svg",
     "static/media/preloader.svg": "/react-educational-project/static/media/preloader.17ad3d43e213482724f0f51de2366a32.svg",
-    "static/media/vk.svg": "/react-educational-project/static/media/vk.56d285bfac1e03eb3eb166332794f951.svg",
-    "static/media/twitter.svg": "/react-educational-project/static/media/twitter.1a381f6cb2852a41e36beccbf35cf22e.svg",
-    "static/media/instagram.svg": "/react-educational-project/static/media/instagram.debc4311e1a80a7a653a4f351fd9aee5.svg",
-    "static/media/youtube.svg": "/react-educational-project/static/media/youtube.fcb3e16204e616aa2ccf4900549151b1.svg",
-    "static/media/facebook.svg": "/react-educational-project/static/media/facebook.5b19defb112f9d7f4f5beac6508b62f6.svg",
-    "static/media/mainLink.svg": "/react-educational-project/static/media/mainLink.d7b7758d7b832a65921d306798166680.svg",
     "index.html": "/react-educational-project/index.html",
     "main.bf3be06b.css.map": "/react-educational-project/static/css/main.bf3be06b.css.map",
-    "main.3142e6d8.js.map": "/react-educational-project/static/js/main.3142e6d8.js.map",
-    "270.787af781.chunk.css.map": "/react-educational-project/static/css/270.787af781.chunk.css.map",
-    "270.95dba413.chunk.js.map": "/react-educational-project/static/js/270.95dba413.chunk.js.map",
+    "main.a87410f5.js.map": "/react-educational-project/static/js/main.a87410f5.js.map",
+    "88.5edc2712.chunk.css.map": "/react-educational-project/static/css/88.5edc2712.chunk.css.map",
+    "88.dfae5e81.chunk.js.map": "/react-educational-project/static/js/88.dfae5e81.chunk.js.map",
     "687.9e1d30b9.chunk.css.map": "/react-educational-project/static/css/687.9e1d30b9.chunk.css.map",
     "687.788f31e3.chunk.js.map": "/react-educational-project/static/js/687.788f31e3.chunk.js.map",
     "496.3244f5e4.chunk.js.map": "/react-educational-project/static/js/496.3244f5e4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bf3be06b.css",
-    "static/js/main.3142e6d8.js"
+    "static/js/main.a87410f5.js"
   ]
 }
