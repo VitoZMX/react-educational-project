@@ -1,8 +1,13 @@
 # react-educational-project
 
 ### `gh-pages`
+Open [https://social-network.samuraijs.com/](https://social-network.samuraijs.com/login) to view it in the browser.<br />
+
+Email: <b>free@samuraijs.com</b><br />
+Password: <b>free</b><br />
+
 Open [http://vitozmx.github.io/react-educational-project](http://vitozmx.github.io/react-educational-project) to view it in the browser.<br />
-I can provide username and password in private messages
+Reauthorize
 
 ## Available Scripts
 
