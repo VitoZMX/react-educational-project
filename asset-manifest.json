@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/react-educational-project/static/css/main.bf3be06b.css",
-    "main.js": "/react-educational-project/static/js/main.f53afae5.js",
+    "main.js": "/react-educational-project/static/js/main.9a6abc73.js",
     "static/css/88.5edc2712.chunk.css": "/react-educational-project/static/css/88.5edc2712.chunk.css",
-    "static/js/88.dfae5e81.chunk.js": "/react-educational-project/static/js/88.dfae5e81.chunk.js",
+    "static/js/88.fec476fb.chunk.js": "/react-educational-project/static/js/88.fec476fb.chunk.js",
     "static/css/687.9e1d30b9.chunk.css": "/react-educational-project/static/css/687.9e1d30b9.chunk.css",
-    "static/js/687.788f31e3.chunk.js": "/react-educational-project/static/js/687.788f31e3.chunk.js",
+    "static/js/687.785d3b48.chunk.js": "/react-educational-project/static/js/687.785d3b48.chunk.js",
     "static/js/496.3244f5e4.chunk.js": "/react-educational-project/static/js/496.3244f5e4.chunk.js",
     "static/media/noimg.jpeg": "/react-educational-project/static/media/noimg.0cfea98f0e40148dc9f1.jpeg",
     "static/media/avaCat.jpeg": "/react-educational-project/static/media/avaCat.f5995d21302dfb5fb17b.jpeg",
@@ -13,15 +13,15 @@
     "static/media/preloader.svg": "/react-educational-project/static/media/preloader.17ad3d43e213482724f0f51de2366a32.svg",
     "index.html": "/react-educational-project/index.html",
     "main.bf3be06b.css.map": "/react-educational-project/static/css/main.bf3be06b.css.map",
-    "main.f53afae5.js.map": "/react-educational-project/static/js/main.f53afae5.js.map",
+    "main.9a6abc73.js.map": "/react-educational-project/static/js/main.9a6abc73.js.map",
     "88.5edc2712.chunk.css.map": "/react-educational-project/static/css/88.5edc2712.chunk.css.map",
-    "88.dfae5e81.chunk.js.map": "/react-educational-project/static/js/88.dfae5e81.chunk.js.map",
+    "88.fec476fb.chunk.js.map": "/react-educational-project/static/js/88.fec476fb.chunk.js.map",
     "687.9e1d30b9.chunk.css.map": "/react-educational-project/static/css/687.9e1d30b9.chunk.css.map",
-    "687.788f31e3.chunk.js.map": "/react-educational-project/static/js/687.788f31e3.chunk.js.map",
+    "687.785d3b48.chunk.js.map": "/react-educational-project/static/js/687.785d3b48.chunk.js.map",
     "496.3244f5e4.chunk.js.map": "/react-educational-project/static/js/496.3244f5e4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bf3be06b.css",
-    "static/js/main.f53afae5.js"
+    "static/js/main.9a6abc73.js"
   ]
 }
