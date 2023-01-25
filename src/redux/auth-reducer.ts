@@ -1,5 +1,5 @@
 import {stopSubmit} from 'redux-form'
-import {authAPI, securityAPI} from '../api/api'
+import {authAPI, ResultCodeForCaptcha, ResultCodesEnum, securityAPI} from '../api/api'
 
 const SET_USER_DATA = 'samurai-network/auth/SET_USER_DATA'
 const GET_CAPTCHA_URL_SUCCESS = 'samurai-network/auth/GET_CAPTCHA_URL_SUCCESS'
@@ -53,42 +53,40 @@ export const getCaptchaUrlSuccess = (captchaUrl: string | null): GetCaptchaUrlSu
 })
 
 export const getAuthUserData = () => async (dispatch: any) => {
-    let response = await authAPI.me()
+    let meData = await authAPI.me()
 
-    if (response.data.resultCode === 0) {
-        let {id, email, login} = response.data.data
+    if (meData.resultCode === ResultCodesEnum.Success) {
+        let {id, email, login} = meData.data
         dispatch(setAuthUserData(id, email, login, true))
     }
 }
 
 export const login = (email: string, password: string, rememberMe: boolean, captcha: null) => async (dispatch: any) => {
-    let response = await authAPI.login(email, password, rememberMe, captcha)
+    let loginData = await authAPI.login(email, password, rememberMe, captcha)
 
-    if (response.data.resultCode === 0) {
+    if (loginData.resultCode === ResultCodesEnum.Success) {
         // success, get auth data
         dispatch(getAuthUserData())
         dispatch(getCaptchaUrlSuccess(null))
     } else {
-        if (response.data.resultCode === 10) {
-
+        if (loginData.resultCode === ResultCodeForCaptcha.CaptchaIsRequired) {
             dispatch(getCaptchaUrl())
         }
-        let messages = response.data.messages.length > 0 ? response.data.messages : 'Some error'
+        let messages = loginData.messages.length > 0 ? loginData.messages : 'Some error'
         dispatch(stopSubmit('login', {_error: messages}))
     }
 }
 
 export const getCaptchaUrl = () => async (dispatch: any) => {
-    let response = await securityAPI.getCaptcha()
-    const captchaUrl = response.data.url
+    let captchaUrlData = await securityAPI.getCaptcha()
+    const captchaUrl = captchaUrlData.url
     dispatch(getCaptchaUrlSuccess(captchaUrl))
 }
 
 export const logout = () => async (dispatch: any) => {
-    let response = await authAPI.logout()
+    let logoutData = await authAPI.logout()
 
-    authAPI.logout()
-    if (response.data.resultCode === 0) {
+    if (logoutData.resultCode === ResultCodesEnum.Success) {
         dispatch(setAuthUserData(null, null, null, false))
     }
 }
