@@ -16,7 +16,7 @@ import {
     getTotalUserCounter
 } from '../../redux/users-selectors'
 import {UserType} from '../../types/types'
-import {AppStateType} from "../../redux/redux-store";
+import {AppStateType} from '../../redux/redux-store'
 
 type MapStatePropsType = {
     currentPage: number
