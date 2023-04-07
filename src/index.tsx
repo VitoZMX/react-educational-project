@@ -1,10 +1,10 @@
 import reportWebVitals from './reportWebVitals'
 import './index.css'
-import React from 'react'
-import ReactDOM from 'react-dom/client'
 import JSApp from './App'
+import {createRoot} from 'react-dom/client'
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const rootElement = document.getElementById('root') as HTMLElement
+const root = createRoot(rootElement)
 
 root.render(
     <JSApp/>

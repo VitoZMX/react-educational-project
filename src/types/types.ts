@@ -3,6 +3,7 @@ export type UserType = {
     name: string
     status: string
     photos: PhotosType
+    followed: boolean
 }
 
 export type PostType = {
@@ -18,17 +19,18 @@ export type ProfileType = {
     fullName: string
     contacts: ContactsType
     photos: PhotosType
+    aboutMe: string
 }
 
 export type ContactsType = {
-    github: string | null
-    vk: string | null
-    facebook: string | null
-    instagram: string | null
-    twitter: string | null
-    website: string | null
-    youtube: string | null
-    mainLink: string | null
+    github: string
+    vk: string
+    facebook: string
+    instagram: string
+    twitter: string
+    website: string
+    youtube: string
+    mainLink: string
 }
 
 export type PhotosType = {
