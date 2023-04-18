@@ -15,7 +15,7 @@ export type DispatchPropsType = {
 const Header: React.FC<MapPropsType & DispatchPropsType> = (props) => {
     return (
         <header className={s.header}>
-            <img src={logo}/>
+            <img src={logo} alt="logo"/>
             <div className={s.loginBlock}>
                 {props.isAuth
                     ? <div>{props.login} - <button onClick={props.logout}>Log out</button></div>

@@ -13,7 +13,7 @@ let state = {
     newPostText: ''
 }
 
-it('length of posts should be incremented', () => {
+test('length of posts should be incremented', () => {
 
 // 1 Готовим исходные данные - test data
     let action = actions.addPostActionCreator('Kamasutra')
@@ -25,19 +25,19 @@ it('length of posts should be incremented', () => {
     expect(newState.posts.length).toBe(6)
 })
 
-it('messege of new post should be correct', () => {
+test('messege of new post should be correct', () => {
     let action = actions.addPostActionCreator('Kamasutra')
     let newState = profileReducer(state, action)
     expect(newState.posts[2].message).toBe('LOLUK')
 })
 
-it('after deleting length should be decrement', () => {
+test('after deleting length should be decrement', () => {
     let action = actions.deletePost(1)
     let newState = profileReducer(state, action)
     expect(newState.posts.length).toBe(4)
 })
 
-it(`after deleting length shouldn't be decrement if id is incorrect`, () => {
+test(`after deleting length shouldn't be decrement if id is incorrect`, () => {
     let action = actions.deletePost(1000)
     let newState = profileReducer(state, action)
     expect(newState.posts.length).toBe(5)
