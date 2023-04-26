@@ -9,10 +9,9 @@ type PropsType = {
     followingInProgress: Array<number>
     unfollow: (userId: number) => void
     follow: (userId: number) => void
-
 }
 
-let User: React.FC<PropsType> = ({user, followingInProgress, unfollow, follow}) => {
+export const User: React.FC<PropsType> = ({user, followingInProgress, unfollow, follow}) => {
     return (
         <div className={s.userMiniProfile}>
             <div>
@@ -20,7 +19,7 @@ let User: React.FC<PropsType> = ({user, followingInProgress, unfollow, follow}) 
                     <NavLink to={'/profile/' + user.id}>
                         <img src={user.photos.small != null ? user.photos.small : userPhoto}
                              className={s.userPhoto}
-                             alt='avaImg'/>
+                             alt="avaImg"/>
                     </NavLink>
                 </div>
                 <div>
@@ -51,5 +50,3 @@ let User: React.FC<PropsType> = ({user, followingInProgress, unfollow, follow}) 
             </div>
         </div>)
 }
-
-export default User

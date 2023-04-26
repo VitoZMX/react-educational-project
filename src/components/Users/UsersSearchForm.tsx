@@ -1,4 +1,4 @@
-import {Field, Form, Formik, FormikHelpers} from 'formik'
+import {Field, Form, Formik} from 'formik'
 import React from 'react'
 import {FilterType} from '../../redux/users-reducer'
 
