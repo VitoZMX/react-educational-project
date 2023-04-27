@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-educational-project/static/css/main.8def0f4f.css",
-    "main.js": "/react-educational-project/static/js/main.c9a5881a.js",
+    "main.js": "/react-educational-project/static/js/main.d8044099.js",
     "static/css/1.ae7b1e5d.chunk.css": "/react-educational-project/static/css/1.ae7b1e5d.chunk.css",
     "static/js/1.1c6995a5.chunk.js": "/react-educational-project/static/js/1.1c6995a5.chunk.js",
     "static/css/665.d654e790.chunk.css": "/react-educational-project/static/css/665.d654e790.chunk.css",
@@ -13,7 +13,7 @@
     "static/media/preloader.svg": "/react-educational-project/static/media/preloader.17ad3d43e213482724f0f51de2366a32.svg",
     "index.html": "/react-educational-project/index.html",
     "main.8def0f4f.css.map": "/react-educational-project/static/css/main.8def0f4f.css.map",
-    "main.c9a5881a.js.map": "/react-educational-project/static/js/main.c9a5881a.js.map",
+    "main.d8044099.js.map": "/react-educational-project/static/js/main.d8044099.js.map",
     "1.ae7b1e5d.chunk.css.map": "/react-educational-project/static/css/1.ae7b1e5d.chunk.css.map",
     "1.1c6995a5.chunk.js.map": "/react-educational-project/static/js/1.1c6995a5.chunk.js.map",
     "665.d654e790.chunk.css.map": "/react-educational-project/static/css/665.d654e790.chunk.css.map",
@@ -22,6 +22,6 @@
   },
   "entrypoints": [
     "static/css/main.8def0f4f.css",
-    "static/js/main.c9a5881a.js"
+    "static/js/main.d8044099.js"
   ]
 }
