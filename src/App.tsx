@@ -2,7 +2,14 @@ import React, {useEffect, useState} from 'react'
 import {HashRouter, Navigate, NavLink, Route, Routes} from 'react-router-dom'
 import {ConfigProvider, Divider, Layout, Menu, Switch} from 'antd'
 import type {MenuProps, MenuTheme} from 'antd/es/menu'
-import {MessageOutlined, PlayCircleOutlined, SearchOutlined, SettingOutlined, UserOutlined} from '@ant-design/icons'
+import {
+    MessageOutlined,
+    PlayCircleOutlined,
+    SearchOutlined,
+    SettingOutlined,
+    UserOutlined,
+    WechatOutlined
+} from '@ant-design/icons'
 import 'antd/dist/reset.css'
 import {connect, Provider, useDispatch, useSelector} from 'react-redux'
 import {compose} from 'redux'
@@ -11,13 +18,19 @@ import Preloader from './components/common/Preloader/Preloader'
 import store, {AppDispatch, AppStateType} from './redux/redux-store'
 import {UsersPage} from './components/Users/UsersPage'
 import {LoginPage} from './components/Login/LoginPage'
-import DialogsContainer from './components/Dialogs/DialogsContainer'
+//import DialogsContainer from './components/Dialogs/DialogsContainer'
 import ProfileContainer from './components/Profile/ProfileContainer'
 import {Header} from './components/Header/Header'
 import {NotFound} from './components/NotFound/NotFound'
+import {withSuspense} from './hoc/withSuspense'
 //const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'))
-//const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'))
+const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'))
+const ChatPage = React.lazy(() => import('./pages/Chat/ChatPage'))
 const {Content, Footer, Sider} = Layout
+
+const SuspendedDialogs = withSuspense(DialogsContainer)
+const SuspendedProfile = withSuspense(ProfileContainer)
+const SuspendedChatPage = withSuspense(ChatPage)
 
 type MapPropsType = ReturnType<typeof mapStateToProps>
 
@@ -40,18 +53,19 @@ function getItem(
 const items: MenuItem[] = [
     getItem(<NavLink to="/profile">Profile</NavLink>, '1', <UserOutlined/>),
     getItem(<NavLink to="/dialogs">Messages</NavLink>, '2', <MessageOutlined/>),
-    getItem(<NavLink to="/developers">Find Developers</NavLink>, '3', <SearchOutlined/>),
+    getItem(<NavLink to="/chat">Chat Community</NavLink>, '3', <WechatOutlined/>),
+    getItem(<NavLink to="/developers">Find Developers</NavLink>, '4', <SearchOutlined/>),
     getItem('Media', 'sub1', <PlayCircleOutlined/>, [
-        getItem(<NavLink to="/*">Photo</NavLink>, '4'),
-        getItem(<NavLink to="/*">Music</NavLink>, '5'),
-        getItem(<NavLink to="/*">Video</NavLink>, '6'),
-        getItem(<NavLink to="/*">Live Transmission</NavLink>, '7')
+        getItem(<NavLink to="/*">Photo</NavLink>, '5'),
+        getItem(<NavLink to="/*">Music</NavLink>, '6'),
+        getItem(<NavLink to="/*">Video</NavLink>, '7'),
+        getItem(<NavLink to="/*">Live Transmission</NavLink>, '8')
     ]),
     getItem('Setting', 'sub2', <SettingOutlined/>, [
-        getItem(<NavLink to="/*">Setting</NavLink>, '8'),
         getItem(<NavLink to="/*">Setting</NavLink>, '9'),
+        getItem(<NavLink to="/*">Setting</NavLink>, '10'),
         getItem(<NavLink to="/*">Submenu Setting</NavLink>, 'sub1-2', null,
-            [getItem(<NavLink to="/*">Setting</NavLink>, '10'), getItem('Setting', '11')]),
+            [getItem(<NavLink to="/*">Setting</NavLink>, '11'), getItem('Setting', '12')]),
     ])
 ]
 
@@ -117,7 +131,8 @@ const App: React.FC<MapPropsType> = (props) => {
                         <Content style={{padding: '0 24px', minHeight: 280}}>
                             <Routes>
                                 <Route path="/profile" element={<ProfileContainer/>}/>
-                                <Route path="/dialogs" element={<DialogsContainer/>}/>
+                                <Route path="/dialogs" element={<SuspendedDialogs/>}/>
+                                <Route path="/chat" element={<SuspendedChatPage/>}/>
                                 <Route path="/developers" element={<UsersPage pageTitle={'Page Users'}/>}/>
                                 <Route path="/login" element={<LoginPage/>}/>
                                 <Route path="/" element={<Navigate to={'/profile'}/>}/>
