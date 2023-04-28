@@ -1,8 +1,8 @@
 import React from 'react'
 import s from './MyPosts.module.css'
 import Post from './Post/Post'
-import AddPostForm, {AddPostFormValuesType} from "./Post/AddPostForm/AddPostForm";
-import {PostType} from "../../../types/types";
+import AddPostForm, {AddPostFormValuesType} from './Post/AddPostForm/AddPostForm'
+import {PostType} from '../../../types/types'
 
 export type MapPropsType = {
     posts: Array<PostType>
@@ -12,7 +12,6 @@ export type DispatchPropsType = {
 }
 
 const MyPosts: React.FC<MapPropsType & DispatchPropsType> = props => {
-    console.log('RENDER MyPosts')
 
     let postElements = [...props.posts]
         .reverse()

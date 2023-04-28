@@ -7,6 +7,7 @@ import {RouteProps} from 'react-router'
 import {compose} from 'redux'
 import {AppStateType} from '../../redux/redux-store'
 import {ProfileType} from '../../types/types'
+import {withAuthRedirect} from '../../hoc/withAuthRedirect'
 
 type MapPropsType = ReturnType<typeof mapStateToProps>
 type DispatchPropsType = {
@@ -31,7 +32,7 @@ const ProfileContainer: React.FC<PropsType> = (props) => {
         const refreshProfile = async () => {
             let userId = params.userId ? +params.userId : props.authorizedUserId
             if (!userId) {
-                console.error("ID should exist in URI params or in state ('authorizedUserId')")
+                console.error('ID should exist in URI params or in state (\'authorizedUserId\')')
                 return
             }
             await props.getUserProfile(userId)
@@ -63,7 +64,7 @@ let mapStateToProps = (state: AppStateType) => ({
 })
 
 export default compose<React.ComponentType>(
-    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus, savePhoto, saveProfile}),
+    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus, savePhoto, saveProfile}), withAuthRedirect
 )(ProfileContainer)
 
 /*

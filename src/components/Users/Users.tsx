@@ -67,7 +67,7 @@ export const Users: React.FC<PropsType> = ({...props}) => {
 
         const queryString = new URLSearchParams(query).toString()
 
-        navigate({pathname: '/users', search: queryString})
+        navigate({pathname: '/developers', search: queryString})
     }, [filter, currentPage])
 
     const onPageChanged = (pageNumber: number) => {
