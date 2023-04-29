@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/react-educational-project/static/css/main.ab5ade18.css",
-    "main.js": "/react-educational-project/static/js/main.cc6242a2.js",
+    "main.js": "/react-educational-project/static/js/main.27b846d4.js",
     "static/css/806.f6a0a15c.chunk.css": "/react-educational-project/static/css/806.f6a0a15c.chunk.css",
     "static/js/806.058d6e2a.chunk.js": "/react-educational-project/static/js/806.058d6e2a.chunk.js",
-    "static/js/925.b8baba2f.chunk.js": "/react-educational-project/static/js/925.b8baba2f.chunk.js",
+    "static/js/925.e0f9a5c4.chunk.js": "/react-educational-project/static/js/925.e0f9a5c4.chunk.js",
     "static/js/496.7d589a6b.chunk.js": "/react-educational-project/static/js/496.7d589a6b.chunk.js",
     "static/media/noimg.jpeg": "/react-educational-project/static/media/noimg.0cfea98f0e40148dc9f1.jpeg",
     "static/media/avaCat.jpeg": "/react-educational-project/static/media/avaCat.f5995d21302dfb5fb17b.jpeg",
@@ -12,14 +12,14 @@
     "static/media/preloader.svg": "/react-educational-project/static/media/preloader.17ad3d43e213482724f0f51de2366a32.svg",
     "index.html": "/react-educational-project/index.html",
     "main.ab5ade18.css.map": "/react-educational-project/static/css/main.ab5ade18.css.map",
-    "main.cc6242a2.js.map": "/react-educational-project/static/js/main.cc6242a2.js.map",
+    "main.27b846d4.js.map": "/react-educational-project/static/js/main.27b846d4.js.map",
     "806.f6a0a15c.chunk.css.map": "/react-educational-project/static/css/806.f6a0a15c.chunk.css.map",
     "806.058d6e2a.chunk.js.map": "/react-educational-project/static/js/806.058d6e2a.chunk.js.map",
-    "925.b8baba2f.chunk.js.map": "/react-educational-project/static/js/925.b8baba2f.chunk.js.map",
+    "925.e0f9a5c4.chunk.js.map": "/react-educational-project/static/js/925.e0f9a5c4.chunk.js.map",
     "496.7d589a6b.chunk.js.map": "/react-educational-project/static/js/496.7d589a6b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ab5ade18.css",
-    "static/js/main.cc6242a2.js"
+    "static/js/main.27b846d4.js"
   ]
 }
